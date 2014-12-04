@@ -1,0 +1,62 @@
+﻿@model IEnumerable<MVC.EF.Mappings.Models.Pessoa>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Listando Todos os Dados</h2>
+@{
+    var count = 0;
+
+    foreach (var pessoa in Model)
+    {
+        count++;
+        var bkg = "#ffffff";
+
+        if (count%2 == 1)
+        {
+            bkg = "#e2e2e2";
+        }
+
+        <table style="background: @bkg" class="table">
+            <tr>
+                <td>
+                    <h1>Pessoa Base</h1>
+                    <table class="table">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.DataCadastro)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Ativo)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.NegarCredito)
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(model => pessoa.DataCadastro)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => pessoa.Ativo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => pessoa.NegarCredito)
+                            </td>
+                        </tr>
+                    </table>
+                    <h1>Pessoa Física</h1>
+                    @Html.Partial("_PessoaFisica", pessoa.PessoaFisica)
+
+                    <h1>Endereco Pessoa Física</h1>
+                    @Html.Partial("_Endereco", pessoa.PessoaFisica.EnderecoList)
+
+                    <h1>Pessoas Jurídicas</h1>
+                    @Html.Partial("_PessoaJuridica", pessoa.PessoaJuridicaList)
+                </td>
+            </tr>
+        </table>
+    }
+}

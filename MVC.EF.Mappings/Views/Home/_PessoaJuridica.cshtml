@@ -1,0 +1,31 @@
+﻿@model IEnumerable<MVC.EF.Mappings.Models.PessoaJuridica>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cnpj)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RazaoSocial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PessoaId)
+        </th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cnpj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RazaoSocial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PessoaId)
+            </td>
+        </tr>
+    }
+</table>
+<h1>Enderecos Pessoas Jurídicas</h1>
+@Html.Partial("_Endereco", Model.SelectMany(p => p.EnderecoList))

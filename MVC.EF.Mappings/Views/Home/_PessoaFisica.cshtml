@@ -1,0 +1,29 @@
+﻿@model MVC.EF.Mappings.Models.PessoaFisica
+
+Pessoa Fisica
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cpf)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PessoaFisicaId)
+        </th>
+    </tr>
+
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Cpf)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.PessoaFisicaId)
+        </td>
+    </tr>
+</table>
+
