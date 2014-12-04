@@ -33,7 +33,7 @@ Os mapeamentos foram feitos dentro de um projeto ASP.NET MVC 5 qual exibe uma Vi
 
 ### Feedback
 
-Entre em [contato](http://www.eduardopires.net.br) para enviar seu feedback
+Entre em <a href="http://www.eduardopires.net.br/" target="_blank">contato</a> para enviar seu feedback
 
 Eduardo Pires - Microsoft MVP ASP.NET
 
