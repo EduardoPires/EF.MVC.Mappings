@@ -25,7 +25,7 @@ namespace MVC.EF.Mappings.Models.EntityConfig
                 {
                     me.MapLeftKey("PessoaFisicaId");
                     me.MapRightKey("EnderecoId");
-                    me.ToTable("PessoaJuridicaEndereco");
+                    me.ToTable("PessoaFisicaEndereco");
                 });
         }
     }
